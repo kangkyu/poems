@@ -104,7 +104,7 @@ func consume(topics []string, master sarama.Consumer) (chan *sarama.ConsumerMess
 
 				case msg := <-consumer.Messages():
 					consumers <- msg
-					fmt.Println("Got message on topic ", topic, msg.Value)
+					// fmt.Println("Got message on topic ", topic, msg.Value)
 				}
 			}
 		}(topic, consumer)
